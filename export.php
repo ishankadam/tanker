@@ -1,0 +1,14 @@
+<?php
+require('connect2.php');
+$conn=new mysqli($servername,$username,$password,$dbname);
+$sql="select * from tankerdetails";
+$res=mysqli_query($conn,$sql);
+$html='<table><tr><td>registrationnumber</td><td>certificate</td><td>image</td><td>make</td><td>model</td><td>manufacturingdate</td><td>DATE</td><td>fitness</td><td>image1</td><td>insurance</td><td>productinsurance</td><td>statepermit</td><td>nationalpermit</td><td>explosive</td><td>calibraton</td><td>polution</td><td>safety</td><td>tax</td><td>emidate</td><td>emiamount</td><td>restemiamount</td><td>tyre</td><td>battery</td><td>capacity</td><td>ch1</td><td>ch2</td><td>ch3</td><td>ch4</td><td>ch5</td><td>ch6</td><td>company</td><td>slno</td><td>dop</td><td>warupto</td><td>image2</td><td>dlno</td><td>hazno</td><td>aadharno</td><td>mobileno</td><td>address</td><td>accno</td><td>nob</td><td>ifsc</td><td>dlno1</td><td>hazno1</td><td>aadharno1</td><td>mobileno1</td><td>address1</td><td>accno1</td><td>nob1</td><td>ifsc1</td></tr>';
+while($row=mysqli_fetch_assoc($res)){
+	$html.='<tr><td>'.$row['registrationnumber'].'</td><td>'.$row['certificate'].'</td><td>'.$row['image'].'</td><td>'.$row['make'].'</td><td>'.$row['model'].'</td><td>'.$row['manufacturingdate'].'</td><td>'.$row['DATE'].'</td><td>'.$row['fitness'].'</td><td>'.$row['image1'].'</td><td>'.$row['insurance'].'</td><td>'.$row['productinsurance'].'</td><td>'.$row['statepermit'].'</td><td>'.$row['nationalpermit'].'</td><td>'.$row['explosive'].'</td><td>'.$row['calibraton'].'</td><td>'.$row['polution'].'</td><td>'.$row['safety'].'</td><td>'.$row['tax'].'</td><td>'.$row['emidate'].'</td><td>'.$row['emiamount'].'</td><td>'.$row['restemiamount'].'</td><td>'.$row['tyre'].'</td><td>'.$row['battery'].'</td><td>'.$row['capacity'].'</td><td>'.$row['ch1'].'</td><td>'.$row['ch2'].'</td><td>'.$row['ch3'].'</td><td>'.$row['ch4'].'</td><td>'.$row['ch5'].'</td><td>'.$row['ch6'].'</td><td>'.$row['company'].'</td><td>'.$row['slno'].'</td><td>'.$row['dop'].'</td><td>'.$row['warupto'].'</td><td>'.$row['image2'].'</td><td>'.$row['dlno'].'</td><td>'.$row['hazno'].'</td><td>'.$row['aadharno'].'</td><td>'.$row['mobileno'].'</td><td>'.$row['address'].'</td><td>'.$row['accno'].'</td><td>'.$row['nob'].'</td><td>'.$row['ifsc'].'</td><td>'.$row['dlno1'].'</td><td>'.$row['hazno1'].'</td><td>'.$row['aadharno1'].'</td><td>'.$row['mobileno1'].'</td><td>'.$row['address1'].'</td><td>'.$row['accno1'].'</td><td>'.$row['nob1'].'</td><td>'.$row['ifsc1'].'</td></tr>';
+}
+$html.='</table>';
+header('Content-Type:application/xls');
+header('Content-Disposition:attachment;filename=report.xls');
+echo $html;
+?>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=email],input[type=text], input[type=password],input[type=text], input[type=tel],input[type=number],input[type=DATE]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=range]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<SCRIPT type="text/javascript">
+function validate(thisform)
+{
+
+	var ph = thisform.phnum.value;
+	var pass = thisform.password.value;
+	var conpass = thisform.pswrepeat.value;
+	
+	
+	if (pass != conpass) 
+	{ 
+	alert("You first Passwords is not similar with 2nd password. Please enter same password in both"); 
+	thisform.pswrepeat.focus();
+	return false; 
+	}
+	
+	if(ph.length<10)
+	{
+		alert("phone number must have atleast 10 digits");
+		thisform.phnum.focus();	
+		return false;
+	}
+	if(isNaN(ph))
+	{
+		alert("Invalid phone number");
+		thisform.phnum.focus();	
+		return false;
+	}
+		return true;
+}
+</SCRIPT>
+
+</head>
+<body>
+
+<form action="cashc.php" onsubmit="return validate(this)" method="post">
+  <div class="container">
+    <h1>Enter Cash Details</h1>
+    <hr>
+    <label for="date2"><b>1.Date</b></label>
+    <br>
+    <input type="DATE" placeholder="Enter payment DATE " name="cashdate" required>
+    <label for="unid"><b>UN id</b></label>
+    <input type="text" placeholder="Enter UN ID " name="unid" required>
+    <label for="drcr"><b>DR/CR</b></label>
+    <input type="text" placeholder="Enter DR/CR" name="drcr" required >
+
+
+    <label for="probdet"><b>2.From</b></label>
+    <br>
+    <label for="accdet"><b>Account details</b></label>
+    <input type="text" placeholder="Enter Account Details" name="accdet" required>
+    <label for="amount1"><b>Amount</b></label>
+    <input type="number" placeholder="Enter amount" name="amount1" required>
+
+        <label for="probdet"><b>3.TO</b></label>
+    <br>
+    <label for="accdet"><b>Account details</b></label>
+    <input type="text" placeholder="Enter Account Details" name="accdet1" required>
+    <label for="amount1"><b>Amount</b></label>
+    <input type="number" placeholder="Enter amount" name="amount2" required>
+
+
+    <input type="submit" name="submit" id="login-register-buttons" value="next"></a>
+      <a href="Register.php" id="login-register-butons">Cancel</a>
+  </div>
+  
+  
+</form>
+</body>
+</html>

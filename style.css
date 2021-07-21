@@ -1,0 +1,263 @@
+body {
+    font-family: 'helvetica', 'sans-serif';
+    margin: 0;
+}
+h1, h2, h3, h4, h5 {
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 5.5em;
+    background-color: #3355ff;
+
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, label, strong {
+    line-height: 2;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+    background-color: transparent;
+    border: 1px solid #FFB320;
+    padding: 3px 5px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .strip {
+    display: block;
+    height: 1px;
+    background-color: #FFB320;
+    margin: 4px 0;
+}
+
+#login-register-button {
+    background-color: #3383ff;
+    color: #131313;
+    border-radius: 0px;
+    padding: 30px 25px;
+    font-size: 1.85em;
+    font-weight: 600;
+}
+
+.car-marketing-text {
+    max-width: 1200px;
+    margin: -30px auto 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.car-marketing-text h1 {
+    color: #000000;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+.car-marketing-text button {
+    background-color: #FFB320;
+    color: #131313;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 0.85em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+#car-image {
+    background: url('car1.jpg') top center no-repeat;
+    height: 840px;
+}
+form, .content {
+	width: 40%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+.input-group label {
+	display: block;
+	text-align: left;
+	margin: 3px;
+}
+.input-group input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+#user_type {
+	height: 40px;
+	width: 98%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #5F9EA0;
+	border: none;
+	border-radius: 5px;
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
+.profile_info img {
+	display: inline-block; 
+	width: 50px; 
+	height: 50px; 
+	margin: 5px;
+	float: left;
+}
+.profile_info div {
+	display: inline-block; 
+	margin: 5px;
+}
+.profile_info:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#car-images {
+    background: url('car2.jpg') top center no-repeat;
+    height: 840px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url() no-repeat;
+    background-size: cover;
+}
+ 
+.login-box {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #191970;
+}
+ 
+.login-box h1 {
+    float: left;
+    font-size: 40px;
+    border-bottom: 4px solid #191970;
+    margin-bottom: 50px;
+    padding: 13px;
+}
+ 
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #191970;
+}
+ 
+.fa {
+    width: px;
+    float: left;
+    text-align: center;
+}
+ 
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    float: left;
+    margin: 0 10px;
+}
+ 
+.button {
+    width: 100%;
+    padding: 8px;
+    color: #ffffff;
+    background: none #191970;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+#recent-reviews .box .recent-reviews-image {
+    margin-bottom: 0.75em;
+    overflow: hidden;
+}
+
+#recent-reviews .box .recent-reviews-image img {
+    width: 100%;
+}
+
+#recent-reviews .box p {
+    color: #999;
+}
+
+
+
+
